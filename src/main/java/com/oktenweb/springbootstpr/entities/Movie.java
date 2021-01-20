@@ -1,6 +1,7 @@
 package com.oktenweb.springbootstpr.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.oktenweb.springbootstpr.validators.UniqueMovieName;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Movie {
     @Column(nullable = false)
     @NotBlank
     @Size(min = 2, max = 25)
+//    @UniqueMovieName
     private String name;
 
     @Column(nullable = false)
